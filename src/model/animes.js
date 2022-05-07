@@ -51,8 +51,8 @@ export const animes = connection.define('animes', {
     timestamps: false 
 });
 
-// function initTable() {
-//     animes.async()
-// }
+const initTable = async () => {
+    await animes.sync();
+};
 
-// initTable()
+initTable();
