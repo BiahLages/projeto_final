@@ -14,7 +14,7 @@ As ferramentas usadas para este projeto são:
 </div>
 
 ## Link do Site
-
+https://catalogo-animes.onrender.com/
 
 ## Contato
 
