@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Criar</title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+        <div id="sub_header"> </div>
+        <div class="alert">
+            <% if (message != '') { %>
+                <%- include('./partials/alerts.ejs') %>
+            <% } %>
+        </div>
+        <form method="post" action="/criar">
+            <fieldset id="main_field">
+                <legend>Criar</legend>
+                <fieldset>
+                    <label for="nome"> Nome </label>
+                    <input type="text" name="nome" required>
+                </fieldset>
+    
+                <fieldset>
+                    <label for="genero"> Gênero </label>
+                    <input type="text" name="genero" required>
+                </fieldset>
+    
+                <fieldset>
+                    <label for="autor"> Autor </label>
+                    <input type="text" name="autor" required>
+                </fieldset>
+    
+                <fieldset>
+                    <label for="temporadas"> Temporadas </label>
+                    <input type="number" name="temporadas" required>
+                </fieldset>
+    
+                <fieldset>
+                    <label for="episodios"> Episódios </label>
+                    <input type="number" name="episodios" required>
+                </fieldset>
+    
+                <fieldset>
+                    <label for="img"> Imagem </label>
+                    <input type="url" name="img" required>
+                </fieldset>
+    
+                <fieldset>
+                    <label for="iframe"> iFrame </label>
+                    <input type="text" name="iframe" required>
+                </fieldset>
+    
+                <fieldset>
+                    <label for="lancamento"> Lançamento </label>
+                    <input type="number" name="lancamento" required>
+                </fieldset>
+
+                <fieldset>
+                    <label for="sinopse"> Sinopse </label>
+                    <input type="text" name="sinopse" required>
+                </fieldset>
+    
+                <button type="submit"> Enviar </button>
+
+            </fieldset>            
+
+        </form>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+    <script src="/script/script.js"></script>
+</body>
+</html>

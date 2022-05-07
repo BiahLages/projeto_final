@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Animes List</title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %> 
+   
+    <main>
+        <div id="sub_header"> Animes List  </div>
+        <div class="alert">
+            <% if (message != '') { %>
+                <%- include('./partials/alerts.ejs') %>
+            <% } %>
+        </div>
+
+        <section id="card_container">
+            <% listAnimes.forEach(element => { %>
+                <a href="/detalhes/<%= element.id %> ">
+                    <article class="cards">
+                        <div class="card_img">
+                            <img src="<%= element.img %> " alt="Imagem de divulgação do anime">
+                        </div>
+                        <div class="card_nome">
+                            <%= element.nome %> 
+                        </div>
+                    </article>
+                </a> 
+                <div class="btn_container">
+                   <a href="/deletar/<%= element.id %> "><i class="fa-solid fa-trash"></i></a>
+                    <a href="/editar/<%= element.id %> "><i class="fa-solid fa-pencil"></i></a>
+                </div> 
+            <% }) %>
+
+        </section>
+         
+    </main>
+
+    <%- include('./partials/footer.ejs') %> 
+    <script src="/script/script.js"></script>
+</body>
+</html>
